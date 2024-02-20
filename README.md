@@ -2,10 +2,6 @@
 
 ## Market-Making by a Foreign Exchange Dealer
 
-### Structure
-
-...
-
 ## Theoretical model
 
 ### Model
