@@ -44,7 +44,7 @@ class Environment:
         \int_0^{+inf} z * mu_t^{n, i, j}(dz)
         """
         trades = np.random.poisson(self._intensity_function(0, delta(t, 0)) * self.T / self.steps).astype(float)
-        comissions = np.random.poisson(self._intensity_function(0, delta(t, 0)) * self.T / self.steps).astype(float)
+        comissions = np.random.poisson(self._intensity_function(0, delta(t, 0)) * self.T / self.steps).astype(float) * 0
         pred_z = 0
         for z in np.logspace(0, np.log10(self.max_value_of_trade), self.number_of_points_in_sampling):
             curr_delta = delta(z, t)

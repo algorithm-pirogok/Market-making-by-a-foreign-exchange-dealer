@@ -191,7 +191,8 @@ class Control:
                          
         second_part = self.env.market_impact * Y_t * (1-kernel)
 
-        param = -first_part + np.tile(second_part, (len(second_part), 1)).T - np.tile(second_part, (len(second_part), 1))        
+        param = -first_part + np.tile(second_part, (len(second_part), 1)).T - np.tile(second_part, (len(second_part), 1))
+        # print("diller", param)     
         diller_policy = self._derivative_of_h_beautiful(param)
 
         sz = np.arange(diller_policy.shape[0])
